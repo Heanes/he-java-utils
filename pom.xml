@@ -12,6 +12,7 @@
     <modules>
         <module>he-java-utils-core</module>
         <module>he-java-utils-scaffolding</module>
+        <module>he-java-utils-sdk</module>
     </modules>
 
     <properties>
@@ -32,6 +33,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.heanes.utils</groupId>
+                <artifactId>he-java-utils-sdk</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.heanes.utils</groupId>
                 <artifactId>he-java-utils-core</artifactId>
