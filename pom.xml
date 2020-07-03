@@ -22,7 +22,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <org.projectlombok.lombok.version>1.18.10</org.projectlombok.lombok.version>
-        <log4j.version>2.12.1</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
         <spring.framework.core.version>5.2.2.RELEASE</spring.framework.core.version>
         <spring.framework.context.version>5.2.2.RELEASE</spring.framework.context.version>
         <spring.framework.tx.version>5.2.2.RELEASE</spring.framework.tx.version>
