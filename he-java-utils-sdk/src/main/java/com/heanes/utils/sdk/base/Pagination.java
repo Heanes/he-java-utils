@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 数据分页类
+ * 数据分页类。查询参数类继承此类，来组成分页查询参数
  *
  * @author Heanes
  * @time 2020-01-03 19:21:07 周五
