@@ -1,14 +1,14 @@
 # he-java-utils
 常用java工具
 
-## he-java-utils-sdk
+## he-utils-sdk
 
 通用类定义
 
-## he-java-utils-core
+## he-utils-core
 
 核心包
 
-## he-java-utils-scaffolding
+## he-utils-scaffolding
 
 脚手架工具

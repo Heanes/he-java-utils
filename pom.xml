@@ -10,9 +10,9 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
-        <module>he-java-utils-core</module>
-        <module>he-java-utils-scaffolding</module>
-        <module>he-java-utils-sdk</module>
+        <module>he-utils-core</module>
+        <module>he-utils-scaffolding</module>
+        <module>he-utils-sdk</module>
     </modules>
 
     <properties>
@@ -35,17 +35,17 @@
         <dependencies>
             <dependency>
                 <groupId>com.heanes.utils</groupId>
-                <artifactId>he-java-utils-sdk</artifactId>
+                <artifactId>he-utils-sdk</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.heanes.utils</groupId>
-                <artifactId>he-java-utils-core</artifactId>
+                <artifactId>he-utils-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.heanes.utils</groupId>
-                <artifactId>he-java-utils-scaffolding</artifactId>
+                <artifactId>he-utils-scaffolding</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

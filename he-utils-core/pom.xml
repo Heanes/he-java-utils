@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>he-java-utils-core</artifactId>
+    <artifactId>he-utils-core</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.heanes.utils</groupId>
-            <artifactId>he-java-utils-sdk</artifactId>
+            <artifactId>he-utils-sdk</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
