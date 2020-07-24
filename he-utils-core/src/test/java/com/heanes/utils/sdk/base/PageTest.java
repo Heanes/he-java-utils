@@ -10,16 +10,16 @@ import org.junit.jupiter.api.Test;
  * @author Heanes
  * @time 2020-07-06 10:56:37 周一
  */
-public class PaginationTest {
+public class PageTest {
 
     @EqualsAndHashCode(callSuper = true)
     @Data
-    private class TestAQuery extends Pagination{
+    private class TestAQuery extends Page {
         private String startTime;
     }
 
     @Test
-    public void PaginationUseTest() {
+    public void PageUseTest() {
         TestAQuery testAQuery = new TestAQuery();
         testAQuery.setStartTime("2020-07-06 10:59:52 ");
         testAQuery.setPageNumber(1);

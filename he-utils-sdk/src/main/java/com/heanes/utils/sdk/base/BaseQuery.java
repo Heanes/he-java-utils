@@ -1,6 +1,7 @@
 package com.heanes.utils.sdk.base;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
@@ -11,11 +12,11 @@ import java.util.List;
  * @author Heanes
  * @time 2019-11-13 16:10:05 周三
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class BaseQuery implements Serializable {
-    private static final long serialVersionUID = -4008629857822640094L;
+public class BaseQuery extends Page implements Serializable {
 
-    private Pagination pagination;
+    private static final long serialVersionUID = -4008629857822640094L;
 
     /**
      * 要查询的字段列表，只查需要的字段，可以提高MySQL性能

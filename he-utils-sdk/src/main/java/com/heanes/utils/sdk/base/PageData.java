@@ -1,8 +1,10 @@
 package com.heanes.utils.sdk.base;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,33 +18,38 @@ public class PageData<T> implements Serializable {
     private static final long serialVersionUID = 909989756440820203L;
 
     /**
-     * 分页信息
+     * 总条数
      */
-    private Pagination page;
+    private Long total;
 
     /**
-     * 数据项列表
+     * 页码
      */
-    private List<T> items;
+    private int pageNumber;
+
+    /**
+     * 分页大小
+     */
+    private int pageSize;
+
+    /**
+     * 数据项列表，可考虑的名称叫records、rows、items
+     */
+    private List<T> records;
 
     public PageData() {
     }
 
-    public PageData(Integer pageNumber, Integer pageSize, Long total, List<T> items) {
-        if(this.page == null){
-            this.page = new Pagination();
-        }
-        this.page.setPageNumber(pageNumber);
-        this.page.setPageSize(pageSize);
-        this.page.setTotal(total);
-        this.items = items;
+    public PageData(Integer pageNumber, Integer pageSize, Long total, List<T> records) {
+        this.setPageNumber(pageNumber);
+        this.setPageSize(pageSize);
+        this.setTotal(total);
+        this.records = records;
     }
 
     public PageData(Integer pageNumber, Integer pageSize) {
-        if(this.page == null){
-            this.page = new Pagination();
-        }
-        this.page.setPageNumber(pageNumber);
-        this.page.setPageSize(pageSize);
+        this.setPageNumber(pageNumber);
+        this.setPageSize(pageSize);
+        this.records = new ArrayList<>();
     }
 }

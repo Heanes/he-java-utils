@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @time 2020-01-03 19:21:07 周五
  */
 @Data
-public class Pagination implements Serializable {
+public class Page implements Serializable {
 
     private static final long serialVersionUID = -5806596257379103172L;
 

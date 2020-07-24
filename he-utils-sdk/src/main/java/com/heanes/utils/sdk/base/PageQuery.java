@@ -11,12 +11,13 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class PageQuery<T> extends Pagination{
+public class PageQuery<T> extends BaseQuery {
+
     private static final long serialVersionUID = -5674756365396504516L;
 
     /**
      * 查询参数类
      * @time 2020-07-06 10:50:26 周一
      */
-    private T searchPo;
+    private T searchParam;
 }

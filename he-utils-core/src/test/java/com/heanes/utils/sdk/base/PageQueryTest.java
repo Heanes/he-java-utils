@@ -21,9 +21,9 @@ public class PageQueryTest {
         PageQuery<TestA> pageQuery = new PageQuery<>();
         TestA testA = new TestA();
         testA.setStartTime("2020-07-06 10:47:41");
-        pageQuery.setSearchPo(testA);
-        TestA searchPo = pageQuery.getSearchPo();
+        pageQuery.setSearchParam(testA);
+        TestA searchParam = pageQuery.getSearchParam();
         System.out.println(pageQuery);
-        System.out.println(searchPo);
+        System.out.println(searchParam);
     }
 }
