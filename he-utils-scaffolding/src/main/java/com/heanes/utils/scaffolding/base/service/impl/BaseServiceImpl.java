@@ -3,6 +3,7 @@ package com.heanes.utils.scaffolding.base.service.impl;
 import com.heanes.utils.sdk.base.Result;
 import com.heanes.utils.scaffolding.base.manager.BaseManager;
 import com.heanes.utils.scaffolding.base.service.BaseService;
+import com.heanes.utils.sdk.enums.ReturnCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +39,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().insert(t));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -55,7 +56,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().insertSelective(t));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -72,7 +73,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().batchInsert(list));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -89,7 +90,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().update(t));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -106,7 +107,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().updateByPrimaryKey(t));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -123,7 +124,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().updateByPrimaryKey(t));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -140,7 +141,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().batchUpdate(list));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -157,7 +158,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().selectByPrimaryKey(primaryKey));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -174,7 +175,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().selectByColumn(q));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -191,7 +192,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().selectOne(q));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -208,7 +209,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().count(q));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -225,7 +226,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().queryList(q));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -242,7 +243,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().delete(t));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -259,7 +260,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(this.getManager().batchDelete(q));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
@@ -277,7 +278,7 @@ public abstract class BaseServiceImpl<T, Q> implements BaseService<T, Q> {
             return new Result<>(data);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return Result.fail(Result.ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
+            return Result.fail(ReturnCodeEnum.SYSTEM_EXCEPTION.getCode(), e.getMessage());
         }
     }
 
