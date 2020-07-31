@@ -4,6 +4,9 @@ import com.heanes.utils.sdk.constants.ReturnCodeConstant;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
 
 /**
  * 公共接口返回封装
@@ -165,11 +168,29 @@ public class Result<T> implements Serializable {
     }
 
     /**
+     * 置为成功
+     */
+    public Result<T> toSuccess(String message){
+        this.code = ReturnCodeConstant.SUCCESS;
+        this.message = message;
+        return this;
+    }
+
+    /**
      * 置为失败
      */
     public Result<T> toFail(){
         this.code = ReturnCodeConstant.FAIL;
         this.message = "fail";
+        return this;
+    }
+
+    /**
+     * 置为失败
+     */
+    public Result<T> toFail(String message){
+        this.code = ReturnCodeConstant.FAIL;
+        this.message = message;
         return this;
     }
 
@@ -183,10 +204,27 @@ public class Result<T> implements Serializable {
 
     /**
      * 是否失败
-     * @return boolean 成功标志
+     * @return boolean 失败标志
      */
     private boolean isFail(){
         return !this.isSuccess();
+    }
+
+    /**
+     * 是否空数据
+     * @return boolean 空数据标志，true：空，false：不为空
+     */
+    private boolean isEmptyData(){
+        if(this.data == null){
+            return true;
+        }
+        if(this.data instanceof Collections){
+            return ((Collection<?>) this.data).size() == 0;
+        }
+        if(this.data instanceof Map){
+            return ((Map<?, ?>) this.data).size() == 0;
+        }
+        return false;
     }
 
 }

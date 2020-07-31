@@ -2,6 +2,7 @@ package com.heanes.utils.core.validate;
 
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * 常用验证工具类
@@ -96,7 +97,11 @@ public class ValidateUtil {
         }
 
         if (obj instanceof Collection) {
-            return ((Collection) obj).size() == 0;
+            return ((Collection<?>) obj).size() == 0;
+        }
+
+        if (obj instanceof Map) {
+            return ((Map<?, ?>) obj).size() == 0;
         }
         return false;
     }
